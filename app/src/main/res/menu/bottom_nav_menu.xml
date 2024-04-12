@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_medicamentos"
+        android:icon="@drawable/botiquin"
+        android:title="@string/title_medicamentos" />
+
+    <item
+        android:id="@+id/navigation_carrito"
+        android:icon="@drawable/carritocompras"
+        android:title="@string/title_carretilla" />
+    <item
+        android:id="@+id/navigation_historial"
+        android:icon="@drawable/expediente"
+        android:title="@string/title_historial" />
+
+</menu>

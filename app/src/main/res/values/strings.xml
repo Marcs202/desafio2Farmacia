@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Farmacia</string>
+    <string name="title_home">Menu</string>
+    <string name="title_medicamentos">Medicamentos</string>
+    <string name="title_carretilla">Carrito</string>
+    <string name="title_historial">Historial</string>
+</resources>

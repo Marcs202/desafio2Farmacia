@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.laboratorio.desafio2farmacia.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_medicamentos"
+        android:name="com.laboratorio.desafio2farmacia.ui.medicamentos.MedicamentosFragment"
+        android:label="@string/title_medicamentos"
+        tools:layout="@layout/fragment_medicamento" />
+
+    <fragment
+        android:id="@+id/navigation_carrito"
+        android:name="com.laboratorio.desafio2farmacia.ui.carrito.CarritoFragment"
+        android:label="@string/title_carretilla"
+        tools:layout="@layout/fragment_carrito" />
+    <fragment
+        android:id="@+id/navigation_historial"
+        android:name="com.laboratorio.desafio2farmacia.ui.medicamentos.HistorialFragment"
+        android:label="@string/title_historial"
+        tools:layout="@layout/fragment_historial" />
+</navigation>
