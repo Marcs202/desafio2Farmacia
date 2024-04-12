@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1017768651156",
+    "firebase_url": "https://farmaciadesafio2dsm-default-rtdb.firebaseio.com",
+    "project_id": "farmaciadesafio2dsm",
+    "storage_bucket": "farmaciadesafio2dsm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017768651156:android:463ac36e9d4020fb664781",
+        "android_client_info": {
+          "package_name": "com.laboratorio.desafio2farmacia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK4AEjygsT7I21ju3X-qJGoRUrRuR0daA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

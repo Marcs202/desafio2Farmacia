@@ -4,10 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.laboratorio.desafio2farmacia.R
 import com.laboratorio.desafio2farmacia.databinding.FragmentHomeBinding
+import com.laboratorio.desafio2farmacia.ui.medicamentos.MedicamentosFragment
 
 class HomeFragment : Fragment() {
 
@@ -28,9 +33,11 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        val navController = findNavController()
+        // Agrega un OnClickListener al botón
+        binding.btnFarmacia.setOnClickListener {
+            // Navegar al MedicamentosFragment
+            navController.navigate(R.id.action_homeFragment_to_medicamentosFragment)
         }
         return root
     }

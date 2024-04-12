@@ -4,4 +4,9 @@
     <string name="title_medicamentos">Medicamentos</string>
     <string name="title_carretilla">Carrito</string>
     <string name="title_historial">Historial</string>
+
+    <!---> Para el layout de home <-->
+    <string name="menu_taco">Takito Perez</string>
+    <string name="menu_salabelleza">Sala de belleza</string>
+    <string name="menu_farmacia">Farmacia Juan Bosco</string>
 </resources>
