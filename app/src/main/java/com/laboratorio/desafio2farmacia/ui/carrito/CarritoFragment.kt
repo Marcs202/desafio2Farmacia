@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.laboratorio.desafio2farmacia.adapter.CarritoAdapter
 import com.laboratorio.desafio2farmacia.adapter.MedicamentoAdapter
 import com.laboratorio.desafio2farmacia.databinding.FragmentCarritoBinding
 import com.laboratorio.desafio2farmacia.ui.medicamentos.MedicamentosViewModel
@@ -42,7 +43,7 @@ class CarritoFragment : Fragment() {
         medicamentosViewModel.carrito.observe(viewLifecycleOwner, Observer { carrito ->
             // Aquí actualizas la UI con los medicamentos en el carrito
             // Puedes utilizar un adaptador similar a MedicamentoAdapter para mostrar los medicamentos en el RecyclerView
-            val adapter = MedicamentoAdapter(carrito)
+            val adapter = CarritoAdapter(carrito)
             recyclerView.adapter = adapter
         })
 

@@ -49,12 +49,28 @@ public class MedicamentoAdapter extends FirebaseRecyclerAdapter <Medicamentos, M
                 // Aquí obtienes el ViewModel y agregas el medicamento al carrito
                 MedicamentosViewModel viewModel = new ViewModelProvider((ViewModelStoreOwner) v.getContext()).get(MedicamentosViewModel.class);
                 ArrayList<Medicamentos> carrito = viewModel.carrito.getValue();
-                carrito.add(model);  // Asegúrate de tener acceso al medicamento 'model' aquí
-                viewModel.carrito.setValue(carrito);
 
-                Toast toast = Toast.makeText(v.getContext()  ,"Medicamento agregado al carrito",Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.TOP, 0, 0);
-                toast.show();
+                // Verificar si el medicamento ya está en el carrito
+                boolean medicamentoYaEnCarrito = false;
+                for (Medicamentos medicamento : carrito) {
+                    if (medicamento.getCodigo() == model.getCodigo()) { // Ajusta esto según cómo identifiques los medicamentos
+                        medicamentoYaEnCarrito = true;
+                        break;
+                    }
+                }
+
+                if (!medicamentoYaEnCarrito) {
+                    // El medicamento no está en el carrito, entonces agrégalo
+                    carrito.add(model);  // Asegúrate de tener acceso al medicamento 'model' aquí
+                    viewModel.carrito.setValue(carrito);
+
+                    Toast toast = Toast.makeText(v.getContext()  ,"Medicamento agregado al carrito",Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.TOP, 0, 0);
+                    toast.show();
+                } else {
+                    // El medicamento ya está en el carrito, muestra un mensaje
+                    Toast.makeText(v.getContext(), "El medicamento ya está en el carrito", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
