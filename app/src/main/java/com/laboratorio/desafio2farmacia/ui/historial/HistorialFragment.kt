@@ -23,16 +23,15 @@ class HistorialFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val medicamentosViewModel =
-            ViewModelProvider(this).get(MedicamentosViewModel::class.java)
-
+        /*val medicamentosViewModel =
+            ViewModelProvider(this).get(HistorialViewModel::class.java) */
         _binding = FragmentHistorialBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
+        /*
         val textView: TextView = binding.textHistorial
         medicamentosViewModel.text.observe(viewLifecycleOwner) {
             textView.text = "Fragment de historial"
-        }
+        }*/
         return root
     }
 

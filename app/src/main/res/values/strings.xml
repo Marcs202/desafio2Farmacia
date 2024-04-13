@@ -4,9 +4,18 @@
     <string name="title_medicamentos">Medicamentos</string>
     <string name="title_carretilla">Carrito</string>
     <string name="title_historial">Historial</string>
-
     <!---> Para el layout de home <-->
     <string name="menu_taco">Takito Perez</string>
     <string name="menu_salabelleza">Sala de belleza</string>
     <string name="menu_farmacia">Farmacia Juan Bosco</string>
+    <!---> Para el layout de medicamentos <-->
+    <string name="lbl_codigo">Codigo: </string>
+    <string name="titulo_layout_medicamentos">Farmacia Juan Bosco</string>
+    <string name="nombre_medicamento">Farmaco: </string>}
+    <string name="costo_medicamento">Precio por caja: </string>
+    <string name="cantidad_medicamento">Cantidad disponible: </string>
+    <!---> Para el layout de carrito <-->
+    <string name="titulo_layout_carrito">Carrito de compras</string>
+    <string name="lblCantidadCompra">Cantidad a comprar</string>
+
 </resources>

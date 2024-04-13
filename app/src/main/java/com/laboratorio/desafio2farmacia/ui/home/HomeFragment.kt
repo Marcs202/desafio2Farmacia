@@ -27,8 +27,6 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -37,8 +35,10 @@ class HomeFragment : Fragment() {
         // Agrega un OnClickListener al botón
         binding.btnFarmacia.setOnClickListener {
             // Navegar al MedicamentosFragment
-            navController.navigate(R.id.action_homeFragment_to_medicamentosFragment)
+
+            navController.navigate(R.id.action_navigation_home_to_navigation_medicamentos)
         }
+
         return root
     }
 
