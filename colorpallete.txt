@@ -1,0 +1,6 @@
+Dark primary color #303F9F
+primary color #3F51B5
+Rectangle color #E7E7E7
+Text Color #212121
+Circle color #D0BE19
+
