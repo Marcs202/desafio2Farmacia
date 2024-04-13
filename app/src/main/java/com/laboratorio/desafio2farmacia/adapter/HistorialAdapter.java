@@ -22,14 +22,48 @@ import com.laboratorio.desafio2farmacia.model.Medicamentos;
 import com.laboratorio.desafio2farmacia.ui.medicamentos.MedicamentosViewModel;
 import com.squareup.picasso.Picasso;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
-public class HistorialAdapter extends FirebaseRecyclerAdapter <Compras, HistorialAdapter.ViewHolder> {
+public class HistorialAdapter extends FirebaseRecyclerAdapter<Compras, HistorialAdapter.ViewHolder> {
 
-    public  HistorialAdapter(@NonNull FirebaseRecyclerOptions<Compras> options){
+    /**
+     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
+     * {@link FirebaseRecyclerOptions} for configuration options.
+     *
+     * @param options
+     */
+    public HistorialAdapter(@NonNull FirebaseRecyclerOptions<Compras> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull RecyclerView.ViewHolder)
+    protected void onBindViewHolder(@NonNull HistorialAdapter.ViewHolder holder, int position, @NonNull Compras model) {
+        holder.CodigoCompra.setText("");
+        holder.Total.setText("");
+        holder.FechaCompra.setText("");
+        holder.CodigoCompra.setText("Codigo: "+(model.getCodigo()));
+        holder.Total.setText("Total: $"+String.valueOf( model.getCostoTotalCompra()));
+        holder.FechaCompra.setText("Fecha: "+(model.getFecha()));
+    }
+
+    @NonNull
+    @Override
+    public HistorialAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v =  LayoutInflater.from(parent.getContext()).inflate(R.layout.view_single_compra,parent,false);
+        return new ViewHolder(v);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView CodigoCompra, FechaCompra, Total;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            CodigoCompra = itemView.findViewById(R.id.lblCodCompra);
+            FechaCompra = itemView.findViewById(R.id.lblFechaCompra);
+            Total = itemView.findViewById(R.id.lblCostoCompra);
+        }
+    }
 }

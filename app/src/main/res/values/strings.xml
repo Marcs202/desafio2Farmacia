@@ -20,5 +20,7 @@
     <string name="btnCompra">Comprar</string>
     <!---> Para el layout de historial <-->
     <string name="titulo_layout_historial">Historial de compras</string>
-    <string name="lblTotal">Total</string>
+    <string name="lblCodigoCompra">Codigo de compra: </string>
+    <string name="lblTotal">Total: </string>
+    <string name="lblFechaCompra">Fecha: </string>
 </resources>

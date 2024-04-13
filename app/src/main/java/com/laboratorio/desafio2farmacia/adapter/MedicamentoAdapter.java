@@ -37,10 +37,15 @@ public class MedicamentoAdapter extends FirebaseRecyclerAdapter <Medicamentos, M
 
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Medicamentos model) {
-        holder.lblMedicamento.setText(holder.lblMedicamento.getText() +" " + (model.getCodigo()));
-        holder.nombre.setText(holder.nombre.getText() +" " + model.getNombre());
-        holder.cantidad.setText(holder.cantidad.getText() +" " +String.valueOf( model.getCantidad()) );
-        holder.precio.setText(holder.precio.getText() +" " + String.valueOf(model.getPrecio()));
+        holder.lblMedicamento.setText("");
+        holder.nombre.setText("");
+        holder.cantidad.setText("");
+        holder.precio.setText("");
+        // Cargar la nueva información del modelo en la vista
+        holder.lblMedicamento.setText("Código: " + model.getCodigo());
+        holder.nombre.setText("Farmaco: " + model.getNombre());
+        holder.cantidad.setText("Cantidad disponible: " + String.valueOf(model.getCantidad()));
+        holder.precio.setText("Precio: " + String.valueOf(model.getPrecio()));
         Picasso.get().load(model.getUrlImagen()).into(holder.imagenMedicamento);
 
         holder.botonCarrito.setOnClickListener(new View.OnClickListener() {
