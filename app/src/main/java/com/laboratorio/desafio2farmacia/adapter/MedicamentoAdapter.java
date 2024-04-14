@@ -45,7 +45,7 @@ public class MedicamentoAdapter extends FirebaseRecyclerAdapter <Medicamentos, M
         holder.lblMedicamento.setText("Código: " + model.getCodigo());
         holder.nombre.setText("Farmaco: " + model.getNombre());
         holder.cantidad.setText("Cantidad disponible: " + String.valueOf(model.getCantidad()));
-        holder.precio.setText("Precio: " + String.valueOf(model.getPrecio()));
+        holder.precio.setText("Precio: $" + String.valueOf(model.getPrecio()));
         Picasso.get().load(model.getUrlImagen()).into(holder.imagenMedicamento);
 
         holder.botonCarrito.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +69,7 @@ public class MedicamentoAdapter extends FirebaseRecyclerAdapter <Medicamentos, M
                     carrito.add(model);  // Asegúrate de tener acceso al medicamento 'model' aquí
                     viewModel.carrito.setValue(carrito);
 
-                    Toast toast = Toast.makeText(v.getContext()  ,"Medicamento agregado al carrito",Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(v.getContext()  ,"Medicamento agregado al carrito",Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.TOP, 0, 0);
                     toast.show();
                 } else {

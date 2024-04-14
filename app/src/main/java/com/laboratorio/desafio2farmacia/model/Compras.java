@@ -1,5 +1,10 @@
 package com.laboratorio.desafio2farmacia.model;
 
+import com.google.firebase.database.snapshot.StringNode;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 public class Compras {
     String Codigo;
     String Fecha;
@@ -14,6 +19,7 @@ public class Compras {
         Fecha = fecha;
         CostoTotalCompra = costoTotalCompra;
     }
+
 
     public String getCodigo() {
         return Codigo;

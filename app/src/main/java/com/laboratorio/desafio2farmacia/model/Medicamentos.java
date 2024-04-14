@@ -3,9 +3,6 @@ package com.laboratorio.desafio2farmacia.model;
 public class Medicamentos {
     String Nombre;
     String UrlImagen;
-
-
-
     String Codigo;
     int Cantidad;
     Double Precio;
