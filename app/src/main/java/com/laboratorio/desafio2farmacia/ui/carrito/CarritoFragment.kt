@@ -61,7 +61,11 @@ class CarritoFragment : Fragment() {
                 // Si el carrito no está vacío, haz que el botón sea visible
                 binding.btnComprar.visibility = View.VISIBLE
 
-                binding.btnComprar.setOnClickListener { realizarCompra(carrito,adapter) }
+                binding.btnComprar.setOnClickListener { realizarCompra(carrito,adapter)
+                    carrito.clear()
+                    adapter.notifyDataSetChanged()
+                }
+
             }
         })
 
@@ -107,16 +111,16 @@ class CarritoFragment : Fragment() {
                         // Se produjo un error al registrar la compra
                         Toast.makeText(requireContext(), "Error al realizar la compra", Toast.LENGTH_SHORT).show()
                         Log.e(TAG, "Error al realizar la compra", exception)
+
                     }
+
             } else {
                 // No hay suficiente cantidad disponible para comprar este medicamento
                 Toast.makeText(requireContext(), "No hay suficiente cantidad disponible para comprar ${medicamento.nombre}", Toast.LENGTH_SHORT).show()
             }
         }
     }
-    private fun limpiarCarrito(){
 
-    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
